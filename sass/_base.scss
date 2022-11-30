@@ -1,11 +1,16 @@
+// css variables can be modified in dev tools or in js, easier to use in calc function
+// root psedo class, (same as html selector but with higher specificity), is a like global parent elm
 :root {
+  // custom css properties / variables
   --color-primary: #eb2f64;
   --color-primary-light: #ff3366;
   --color-primary-dark: #ba265d;
+
   --color-grey-light-1: #faf9f9;
   --color-grey-light-2: #f4f2f2;
   --color-grey-light-3: #f0eeee;
   --color-grey-light-4: #ccc;
+
   --color-grey-dark-1: #333;
   --color-grey-dark-2: #777;
   --color-grey-dark-3: #999;
@@ -24,18 +29,20 @@
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 62.5%; // 1rem = 10px, 10px/16px = 62.5%
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.6;
   color: var(--color-grey-dark-2);
   background-image: linear-gradient(to right bottom, var(--color-primary-light), var(--color-primary-dark));
   background-size: cover;
   background-repeat: no-repeat;
+
+  // means if the content is less than 100 vh in height it will set that to 100vh and if the content height is more than 100vh, it will set the height to that height(sort of auto)
+  // min-height 100vh, but if the height can be bigger, it will simply be bigger, so not strictly enforced
+  // the minimim the height can be, it can be bigger, but not smaller
   min-height: 100vh;
 }
-
-/*# sourceMappingURL=style.css.map */
