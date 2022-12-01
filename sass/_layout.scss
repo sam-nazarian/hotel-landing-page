@@ -26,9 +26,18 @@
 
   //will not shrink length always stays the same no matter what, (for percent value it's okay for it to not shrink)
   flex: 0 0 18%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .hotel-view {
+  background-color: #fff;
+
+  //TEST
   background-color: orangered;
+  height: 80rem;
+
   flex: 1; //elm should grow as much as it can
 }
