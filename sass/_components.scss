@@ -2,21 +2,67 @@
 // Logo
 .logo {
   height: 3.25rem;
+  margin-left: 3rem;
 }
 
 /////////////////////////////////////
 // SEARCH
 .search {
+  flex: 0 0 40%;
+
+  // use flex to horizontally & verically center an elm
+  display: flex; //a flex item becomes a flex container
+  align-items: center;
+  justify-content: center;
+
   &__input {
+    font-family: inherit;
+    font-size: inherit;
+    color: inherit;
+    background-color: var(--color-grey-light-2);
+    border: none;
+    padding: 0.7rem 2rem;
+    border-radius: 100px;
+    width: 90%;
+    transition: all 0.2s;
+    margin-right: -3.25rem; //to make the button move on top of the input
+
+    &:focus {
+      outline: none;
+      width: 100%;
+      background-color: var(--color-grey-light-3);
+    }
+
+    // ::placeholder is a pseudo element (something that is not visible in your html code but can be manipulated like a regular element).
+    &::-webkit-input-placeholder {
+      font-weight: 100;
+      color: var(--color-grey-light-4);
+    }
   }
 
+  // background is transparent so this is not needed
+  // &__input:focus + &__button {
+  //   background-color: var(--color-grey-light-3);
+  // }
+
   &__button {
+    border: none;
+    background-color: transparent;
+
+    &:focus {
+      outline: none;
+    }
+
+    &:active {
+      transform: translateY(2px); //make button move down when active
+    }
   }
 
   &__icon {
     //must set both height & width
     height: 2rem;
     width: 2rem;
+    fill: var(--color-grey-dark-3);
   }
 }
 
@@ -24,6 +70,7 @@
 // USER NAVIGATION
 
 .user-nav {
+  background-color: greenyellow;
   &__icon-box {
   }
 
