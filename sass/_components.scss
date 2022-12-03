@@ -403,15 +403,18 @@
     margin-right: 0.7rem;
 
     // Older browsers, doens't allow us to change the color
-    // background-image: url(../img/chevron-thin-right.svg);
-    // background-size: cover;
+    background-image: url(../img/chevron-thin-right.svg);
+    background-size: cover;
 
     //Newer browsers - masks
-    background-color: var(--color-primary);
-    -webkit-mask-image: url(../img/chevron-thin-right.svg);
-    -webkit-mask-size: cover;
-    mask-image: url(../img/chevron-thin-right.svg); //area were we can look through an elm and see what's behinde the elm
-    mask-size: cover; //make the svg fit properly if it's size is adjusted (make the icon cover the entire elm)
+    @supports (-webkit-mask-image: url()) or (mask-image: url()) {
+      background-color: var(--color-primary);
+      -webkit-mask-image: url(../img/chevron-thin-right.svg);
+      -webkit-mask-size: cover;
+      mask-image: url(../img/chevron-thin-right.svg); //area were we can look through an elm and see what's behinde the elm
+      mask-size: cover; //make the svg fit properly if it's size is adjusted (make the icon cover the entire elm)
+      background-image: none;
+    }
   }
 }
 
