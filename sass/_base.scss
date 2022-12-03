@@ -22,10 +22,12 @@
 }
 
 // css-variables don't work on media queries
-// Why use EM? that the browser may have a different default font-size  than 16. They maybe different based on different devices or user can change them for legibility reasons. Using em  for breakpoints makes sure that no matter what the font-size  is the breakpoints are applied appropriately.
+// Why use EM? that the browser may have a different default font-size  than 16. They maybe different based on different devices or user can change them for legibility reasons. Using em  for breakpoints makes sure that no matter what the font-size is the breakpoints are applied appropriately.
 $bp-largest: 75rem; // 1200px
 $bp-large: 68.75rem; // 1100px
 $bp-medium: 56.25em; //900px
+$bp-small: 37.5em; //600px
+$bp-smallest: 31.25em; //500px
 
 * {
   margin: 0;
